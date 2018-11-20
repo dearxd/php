@@ -75,6 +75,7 @@
     <script>
         document.getElementsByClassName('wp-inner')[0].fullpage({
             orientationchange: function(e) {
+                alert(e)
                 if (e === 'landscape') {
                     $('.landscape').show();
                 } else {
