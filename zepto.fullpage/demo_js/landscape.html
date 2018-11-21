@@ -76,11 +76,10 @@
         document.getElementsByClassName('wp-inner')[0].fullpage({
             orientationchange: function(e) {
                 if (e === 'landscape') {
-                    // $('.landscape').show();
-                    $('.landscape').css("display","block")
+                    alert($('.landscape'))
+                    $('.landscape').show();
                 } else {
-                    console.log(1111)
-                    $('.landscape').css("display","block")
+                    alert($('.landscape'))
                     $('.landscape').hide();
                 }
             }
