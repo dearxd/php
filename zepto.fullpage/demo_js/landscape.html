@@ -71,12 +71,13 @@
         <img src="img/landscape.png" height="194" width="128">
         <p>为了更好的体验，请将手机/平板竖过来</p>
     </div>
+    <<script src="../demo/js/zepto.js"></script>
     <script src="../src/js.fullpage.js"></script>
     <script>
         document.getElementsByClassName('wp-inner')[0].fullpage({
             orientationchange: function(e) {
                 if (e === 'landscape') {
-                    alert($('.landscape'))
+                    alert($('.landscape'),alert)
                     $('.landscape').show();
                 } else {
                     alert($('.landscape'))
