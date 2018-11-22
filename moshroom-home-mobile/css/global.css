@@ -352,6 +352,9 @@
     right: 20px;
     top: 10px;
     color:#fff;
-    font-size:20px;
+    font-size:30px;
+    transition: All 0.4s ease-in-out;
 }
-
+.closed-btn:hover{
+    transform: rotateZ(360deg);
+}
