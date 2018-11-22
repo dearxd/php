@@ -30,7 +30,7 @@ body,html {
     float: right;
 }
 img{
-    display: block;
+    display: inline-block;
     border: 0;
 }
 span, a, img, input, button {
