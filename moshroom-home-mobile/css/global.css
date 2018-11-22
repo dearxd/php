@@ -136,27 +136,27 @@
 
 .room-pig{
     display:inline-block;
-    width:6rem;
-    height: 8.6rem;
+    width:5.8rem;
+    height: 8rem;
 }
 .text-center{
     text-align:center;
 }
 .first-img{
-    margin-top:0.38rem;
+    margin-top:0.4rem;
 }
 .page1{
     color: #fff;
 }
 .first-name{
-    font-size: 0.6rem;
+    font-size: 0.55rem;
 }
 .first-Ename{
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     font-weight: bold;
 }
 .first-tit{
-    font-size:0.66rem;
+    font-size:0.6rem;
     margin-top:0.3rem;
 }
 .btn{
