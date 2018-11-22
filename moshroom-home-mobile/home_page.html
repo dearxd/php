@@ -54,15 +54,26 @@
                 </div>
             </div>
             <div class="page page3">
-                <div class="js-animate animated" data-animate="fadeInLeft" data-time="0">fadeInLeft</div>
-                <div class="js-animate animated" data-animate="fadeInLeft" data-time="1500">fadeInLeft</div>
-                <div class="js-animate animated" data-animate="fadeInLeft" data-time="3000">fadeInLeft</div>
+                <div class="js-animate animated img-box text-center" data-animate="bounce" data-time="0">
+                    <img src="images/img/phone.png" alt="" class="room-pig">
+                </div>
+                <div class="js-animate animated" data-animate="fadeInLeft" data-time="1500">
+                    <p class="tit">更方便</p>
+                </div>
+                <h5 class="js-animate animated title" data-animate="fadeInLeft" data-time="3000">
+                    为市民建设更加方便、美观、整洁的公共服务设施。
+                </h5>
+                <p class="js-animate animated" data-animate="fadeInLeft" data-time="4500">摩室移动智能卫生间为市民在城市公共区域提供7*24小时的公共卫生间服务，通过微信、支付宝和摩室APP可直接扫描摩室移动智能卫生间上的二维码进入使用。</p>
             </div>
             <div class="page page4">
                 <div class="js-animate animated" data-animate="rollIn" data-time="0">rollIn</div>
                 <div class="js-animate animated" data-animate="rollIn" data-time="1500">rollIn</div>
                 <div class="js-animate animated" data-animate="rollIn" data-time="3000">rollIn</div>
-                
+            </div>
+            <div class="page page5">
+                <div class="js-animate animated" data-animate="rollIn" data-time="0">rollIn</div>
+                <div class="js-animate animated" data-animate="rollIn" data-time="1500">rollIn</div>
+                <div class="js-animate animated" data-animate="rollIn" data-time="3000">rollIn</div>
             </div>
         </div>
     </div>
@@ -75,6 +86,9 @@
     <script src="js/zepto.js"></script>
     <script src="js/zepto.fullpage.js"></script>
     <script>
+        let windowH = $(window).height() - 60,
+            imgH = windowH / 3;
+        $('.second-img').height(imgH);
         $('.wp-inner').fullpage({
             change: function (e) {
                 // 移除动画属性
