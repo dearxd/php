@@ -169,7 +169,7 @@
     margin-top:0.3rem;
     transition: 1s;
     text-decoration: none;
-    font-size:0.6rem;
+    font-size:0.4rem;
 }
 .page2{
     padding: 0.2rem 0.2rem 0;
@@ -291,9 +291,67 @@
     font-size:0.5rem;
     margin-top: 0.3rem;
 } 
-
-
-
-
-
+/*导航*/
+.nav{
+    position:absolute;
+    right:0px;
+    top: 0px;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.nav-box{
+    display:none;
+    position:absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 111;
+}
+.navbar-nav{
+    position:absolute;
+    left: 0;
+    top: 150px;
+    right: 0;
+    bottom:0;
+    text-align:center;
+}
+.navbar-nav li a{
+    padding:14px 0;
+    font-size:20px;
+    color:#fff;
+}
+.closed-btn{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color:#fff;
+    font-size:20px;
+}
 
