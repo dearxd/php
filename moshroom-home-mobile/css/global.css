@@ -361,13 +361,13 @@
 }
 /*合作*/
 .item-cooperation{
-    position:fixed;
+    /*position:fixed;
     margin-left: 0.6rem;
     margin-right:0.6rem;
     padding: 1rem;
     background: #fff;
     margin-top: 1rem;
-    border-radius: 10px;
+    border-radius: 10px;*/
 }
 .form-control-text {
     width: 100%;
@@ -377,6 +377,11 @@
 }
 .contact-box{
     position:relative;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
 }
 .border-top{
     border-bottom: 2px solid #F0F0F0;
@@ -388,8 +393,8 @@
 }
 .e-words {
     position: absolute;
-    left: 0rem;
-    top: 0.1rem;
+    left: 1rem;
+    top: 1.1rem;
     color: #F0F0F0;
     font-weight: bold;
     font-size: 1.4rem;
