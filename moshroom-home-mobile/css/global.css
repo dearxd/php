@@ -366,6 +366,7 @@
     margin-right:0.6rem;
     padding: 0.2rem 1rem;
     background: #fff;
+    margin-top: 1rem;
     border-radius: 10px;
 }
 .form-control-text {
@@ -387,15 +388,15 @@
 }
 .e-words {
     position: absolute;
-    left: 0.4rem;
-    top: 0.4rem;
+    left: 0rem;
+    top: 0.1rem;
     color: #F0F0F0;
     font-weight: bold;
-    font-size: 0.62rem;
+    font-size: 1.4rem;
     font-family: "DINAlternate";
 }
 .from-tit {
-    font-size: 0.35rem;
+    font-size: 0.8rem;
     color: #000;
     position: relative;
     z-index: 1;
@@ -403,12 +404,14 @@
     margin-top: 0.3rem;
     margin-top: 0.45rem;
     font-weight: bold;
+    text-align: left;
 }
 .cooper-con {
     font-size: 0.2rem;
     color: #000;
     font-weight: bold;
     padding-bottom: 0.3rem;
+    text-align: left;
 }
 
 
