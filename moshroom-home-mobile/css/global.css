@@ -268,27 +268,27 @@
 .icon-top{
     margin-top: 3rem
 }
-.page7{
+.footer-con{
     color: #fff;
 }
-.page7 img{
+.footer-con img{
     width:3rem;
     height: 0.8rem;
 }
-.page7 .phone{
+.footer-con .phone{
     margin-top: 1rem;
     font-size:0.6rem;
     color: #fff;
 }
-.page7 .word-times{
+.footer-con .word-times{
     margin-top: 0.4rem;
     font-size:0.5rem;
 }
-.page7 .number{
+.footer-con .number{
     font-size:0.5rem;
     margin-top: 1rem;
 }
-.page7 .num2{
+.footer-con .num2{
     font-size:0.5rem;
     margin-top: 0.3rem;
 } 
