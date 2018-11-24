@@ -160,7 +160,7 @@
     margin-top:0.3rem;
 }
 .btn{
-    padding: 0.2rem 0.4rem 0.3rem;
+    padding: 0.2rem 1rem 0.3rem;
     border-radius: 5px;
     background-color: #116ad9;
     display: inline-block;
@@ -364,7 +364,7 @@
     position:fixed;
     margin-left: 0.6rem;
     margin-right:0.6rem;
-    padding: 0.2rem 1rem;
+    padding: 1rem;
     background: #fff;
     margin-top: 1rem;
     border-radius: 10px;
