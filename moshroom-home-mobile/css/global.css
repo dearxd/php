@@ -360,10 +360,13 @@
     transform: rotateZ(360deg);
 }
 /*合作*/
-.item{
+.item-cooperation{
     position:fixed;
     margin-left: 0.6rem;
     margin-right:0.6rem;
+    padding: 0.2rem 1rem;
+    background: #fff;
+    border-radius: 10px;
 }
 .form-control-text {
     width: 100%;
