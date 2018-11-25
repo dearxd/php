@@ -195,12 +195,6 @@
                         $this.addClass($this.data('animate')).show();
                     }, time)
                 });
-                $('.page').eq(e.cur).find('.flex-con').each(function(index, el) {
-                    setTimeout(function () {
-                    $(this).height($(this).height());
-                    console.log($(this).height())
-                }, 2000)
-                });
             },
             orientationchange: function(e) {
                 if (e === 'landscape') {
