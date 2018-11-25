@@ -34,7 +34,7 @@
                 <div class="header">
                     <img src="images/img/new_logo.png" class="logo js-animate animated" data-animate="zoomIn" data-time="0">
                 </div>
-                <div class="display-flex">
+                <div class="display-flex flex">
                     <div class="flex-con">
                         <div class="js-animate animated first-img" data-animate="zoomIn" data-time="300">
                             <img src="images/img/room.png" alt="" class="room-pig">
@@ -93,7 +93,7 @@
             </div>
             <div class="page page4 item text-center">
                 <div class="display-flex">
-                    <div class="flex-con">
+                    <div class="flex-con" style="height: 12rem;">
                         <div class="js-animate animated text-center" data-animate="zoomIn" data-time="0">
                             <img src="images/img/solar_energy.png" alt="" class="energy-img">
                         </div>
@@ -109,7 +109,7 @@
             </div>
             <div class="page page5 item text-center">
                 <div class="display-flex">
-                    <div class="flex-con">
+                    <div class="flex-con" style="height: 14.5rem;">
                         <div class="js-animate animated pay-img text-center" data-animate="zoomIn" data-time="0">
                             <img src="images/img/machine.png" alt="" class="room-pig">
                         </div>
@@ -125,7 +125,7 @@
             </div>
             <div class="page page6 item text-center">
                 <div class="display-flex">
-                    <div class="flex-con">
+                    <div class="flex-con" style="height: 11.2rem;">
                         <div class="js-animate animated four-img" data-animate="zoomIn" data-time="0">
                             <img src="images/img/loop.png" alt="" class="room-pig">
                         </div>
@@ -141,7 +141,7 @@
             </div>
             <div class="page page7 text-center footer-con">
                 <div class="display-flex">
-                    <div class="flex-con">
+                    <div class="flex-con" style="height: 9rem;">
                         <img src="images/img/sina.png" class="js-animate" data-animate="fadeInDown" data-time="0" alt="">  
                         <div class="contact js-animate animated" data-animate="fadeInDown" data-time="300">
                            <img src="images/img/wechat.png" alt="">  
@@ -187,13 +187,19 @@
                 });
             },
             afterChange: function (e) {
-                // 添加动画属性
+                // 
                 $('.page').eq(e.cur).find('.js-animate').each(function () {
                     var $this = $(this);
                     var time = $this.data('time');
                     setTimeout(function () {
                         $this.addClass($this.data('animate')).show();
                     }, time)
+                });
+                $('.page').eq(e.cur).find('.flex-con').each(function(index, el) {
+                    setTimeout(function () {
+                    $(this).height($(this).height());
+                    console.log($(this).height())
+                }, 2000)
                 });
             },
             orientationchange: function(e) {
