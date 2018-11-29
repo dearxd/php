@@ -503,5 +503,12 @@ h2.about-title-name{
     margin-left: -100px;
     margin-top: -132px;
 }
-
+.header-top{
+    height: 1.6rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #116ad9;
+}
 
