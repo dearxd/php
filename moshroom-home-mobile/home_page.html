@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/zepto.fullpage.css">
     <link rel="stylesheet" href="css/animate.css">
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
     <div class="wp">
@@ -21,13 +22,13 @@
                 </button>
             </div>
             <div class="nav-box">
-                <i class="closed-btn">x</i>
+                <i class="closed-btn"></i>
                 <ul class="navbar-nav navbar-right" style="">
-                    <li class="active"><a href="#">产品</a></li>
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">城市</a></li>
-                    <li><a href="#">新闻</a></li>
-                    <li><a href="#">广告合作</a></li>
+                    <li class="active"><a href="/">产品</a></li>
+                    <li><a href="about_us.html">关于我们</a></li>
+                    <!--<li><a href="#">城市</a></li>-->
+                    <li><a href="https://news.moshroom.cn">新闻</a></li>
+                    <li><a href="cooperation.html">广告合作</a></li>
                 </ul>
             </div>
             <div class="page page1 text-center">
@@ -36,7 +37,7 @@
                 </div>
                 <div class="display-flex flex">
                     <div class="flex-con">
-                        <div class="js-animate animated first-img" data-animate="zoomIn" data-time="300">
+                        <div class="js-animate animated" data-animate="zoomIn" data-time="300">
                             <img src="images/img/room.png" alt="" class="room-pig">
                         </div>
                         <div class="js-animate animated" data-animate="fadeInDown" data-time="600">
@@ -51,28 +52,28 @@
             </div>
             <div class="page page2">
                 <div class="js-animate animated second-img" data-animate="zoomIn" data-time="0">
-                    <img src="images/banner/1.jpg" alt="">
+                    <a href="https://news.moshroom.cn/2018/11/29/news2/" alt="" height="200"><img src="images/banner/newimages.jpg" alt="">
                     <div class="second">
-                        <h2>新闻标题</h2>
-                        <p class="times">20180901</p>
-                        <p class="details">新闻内容新闻内容新闻内容</p>
-                    </div>
+                        <h2>摩室科技亮相双创周</h2>
+                        <p class="times">2018-11-12</p>
+                        <p class="details">亮相北京2018年全国双创周活动</p>
+                    </div></a>
                 </div>
                 <div class="js-animate animated second-img" data-animate="zoomIn" data-time="300">
-                    <img src="images/banner/2.jpg" alt="">
+                    <a href="https://news.moshroom.cn/2018/11/29/news1/" alt="" height="200"><img src="images/banner/newimages_2.png" alt="">
                     <div class="second">
-                        <h2>新闻标题</h2>
-                        <p class="times">20180901</p>
-                        <p class="details">新闻内容新闻内容新闻内容</p>
-                    </div>
+                        <h2>关于摩室科技</h2>
+                        <p class="times">2018-11-12</p>
+                        <p class="details">方便你我，共创未来</p>
+                    </div></a>
                 </div>
                 <div class="js-animate animated second-img" data-animate="zoomIn" data-time="600">
-                    <img src="images/banner/3.jpg" alt="">
+                    <a href="https://news.moshroom.cn/2018/11/29/news3/" alt="" height="200"><img src="images/banner/newimages_3.jpg" alt="">
                     <div class="second">
-                        <h2>新闻标题</h2>
-                        <p class="times">20180901</p>
-                        <p class="details">新闻内容新闻内容新闻内容</p>
-                    </div>
+                        <h2>北京卫视采访</h2>
+                        <p class="times">2018-11-12</p>
+                        <p class="details">“90后创客”成中关村创业大街生力军</p>
+                    </div></a>
                 </div>
             </div>
             <div class="page page3 item text-center">
@@ -139,14 +140,17 @@
                     </div>
                 </div>
             </div>
-            <div class="page page7 text-center footer-con">
+            <div class="page page7 text-center footer-con" style="position: relative;">
+                <div class="modal-con">
+                    <img src="images/img/close.png" alt="微信公众号" width="200" height="263" class="wechat-img">
+                </div>
                 <div class="display-flex">
-                    <div class="flex-con" style="height: 9rem;">
-                        <img src="images/img/sina.png" class="js-animate" data-animate="fadeInDown" data-time="0" alt="">  
+                    <div class="flex-con" style="height: 8.5rem;">
+                        <a href="https://weibo.com/moshtech?topnav=1&wvr=6&topsug=1"><img src="images/img/sina.png" class="js-animate" data-animate="fadeInDown" data-time="0" alt="" style="width: 106px;"></a>
                         <div class="contact js-animate animated" data-animate="fadeInDown" data-time="300">
-                           <img src="images/img/wechat.png" alt="">  
+                           <img src="images/img/wechat.png" alt="" style="width: 106px;" id="wechat">
                         </div>
-                        <p class="phone js-animate animated" data-animate="fadeInDown" data-time="600">4008-861-921</p>
+                        <p class="phone js-animate animated" data-animate="fadeInDown" data-time="600" style="font-weight: bold;">4008-861-921</p>
                         <p class="word-times js-animate animated" data-animate="fadeInDown" data-time="900">工作日 早10:00-晚8:00</p>
                         <p class="number js-animate animated" data-animate="fadeInDown" data-time="1200">京ICP备17063363号-1</p>
                         <p class="num2 js-animate animated" data-animate="fadeInDown" data-time="1500"> 北京摩室科技有限公司</p>
@@ -164,9 +168,9 @@
     <script src="js/zepto.js"></script>
     <script src="js/zepto.fullpage.js"></script>
     <script>
-        let windowH = $(window).height() - 40,
-            imgH = windowH / 3;
-        $('.second-img').height(imgH);
+        // let windowH = $(window).height() - 40,
+        //     imgH = windowH / 3;
+        // $('.second-img').height(imgH);
         $(".nav-btn").click(function(event) {
             $(".nav-box").show();
             $.fn.fullpage.stop() 
@@ -204,6 +208,63 @@
                 }
             }
         });
+        // 二维码显示隐藏
+        $('#wechat').on('click',function(){
+            $('.modal-con').show();
+        })
+        $('.wechat-img').on('click',function(){
+            $('.modal-con').hide();
+        })
+
+    
+        $(function () {
+            $.ajax({
+                url: "https://moshroom.cn/jwcms/index1.php?s=/Home/Index/wxsignatrue",
+                type: "POST",
+                dataType: 'json',
+                data: {
+                    'host': encodeURIComponent(document.URL.split('#')[0])
+                },
+                success: function (e) {
+                    if (e.code === 0) {
+                        wx.config({
+                            debug: false,
+                            url: e.data.url,
+                            appId: e.data.appId,
+                            timestamp: e.data.timestamp,
+                            nonceStr: e.data.nonceStr,
+                            signature: e.data.signature,
+                            jsApiList: [
+                                'onMenuShareTimeline',
+                                'onMenuShareAppMessage',
+                                'onMenuShareQQ',
+                                'onMenuShareWeibo',
+                                'onMenuShareQZone',
+                            ]
+                        });
+                        wx.ready(function () {
+                            let param = {
+                                title: '摩室科技', // 分享标题
+                                desc: '摩室移动智能卫生间\n方便你我，智享生活。', // 分享描述
+                                link: document.URL, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                imgUrl: 'http://moshroom.cn/images/300.png', // 分享图标
+                                type: '', // 分享类型,music、video或link，不填默认为link
+                                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                                success: function () {}
+                            };
+                            wx.onMenuShareTimeline(param);
+                            wx.onMenuShareAppMessage(param);
+                            wx.onMenuShareQQ(param);
+                            wx.onMenuShareWeibo(param);
+                            wx.onMenuShareQZone(param);
+                        });
+                    } else {
+                        console.log(e.message);
+                    }
+                }
+            });
+        });
+
     </script>
 </body>
 </html>

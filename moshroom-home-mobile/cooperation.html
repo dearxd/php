@@ -9,36 +9,37 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/zepto.fullpage.css">
     <link rel="stylesheet" href="css/animate.css">
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
     <div class="wp">
         <div class="wp-inner">
-            <div class="nav">
-                <button type="button" class="navbar-toggle nav-btn" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>    
-                </button>
-            </div>
-            <div class="nav-box">
-                <i class="closed-btn">x</i>
-                <ul class="navbar-nav navbar-right" style="">
-                    <li class="active"><a href="#">产品</a></li>
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">城市</a></li>
-                    <li><a href="#">新闻</a></li>
-                    <li><a href="#">广告合作</a></li>
-                </ul>
-            </div>
             <div class="page page1 text-center">
                 <div class="header">
                     <img src="images/img/new_logo.png" class="logo">
+                </div>
+                <div class="nav">
+                    <button type="button" class="navbar-toggle nav-btn" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>    
+                    </button>
+                </div>
+                <div class="nav-box">
+                    <i class="closed-btn"></i>
+                    <ul class="navbar-nav navbar-right" style="">
+                        <li class="active"><a href="/">产品</a></li>
+                        <li><a href="about_us.html">关于我们</a></li>
+                        <!--<li><a href="#">城市</a></li>-->
+                        <li><a href="https://news.moshroom.cn">新闻</a></li>
+                        <li><a href="cooperation.html">广告合作</a></li>
+                    </ul>
                 </div>
                 <div class="item-cooperation display-flex js-animate animated" data-animate="zoomIn" data-time="0">
                     <div class="contact-box font-color Center flex-con">
                       <div class="border-top"><div class="border-act"></div></div>
                       <h2 class="e-words">CONTACT</h2>
-                      <h3 class="from-tit">商务合作</h3>
+                      <h3 class="from-tit">广告合作</h3>
                       <p class="cooper-con">摩室寻找更多的合作伙伴来共同打造更加环保、卫生的公共环境。</p>
                       <form action="#" id="form-cooperation" method="POST" enctype="text/plain">
                         <input type="text" class="form-control-text" name="contacts" id="contacts" placeholder="联系人" required="required">
@@ -52,12 +53,15 @@
                             
                 </div>
             </div>
-            <div class="page page2 text-center footer-con" style="background-color: #116ad9;">
+            <div class="page page2 text-center footer-con" style="background-color: #116ad9; position: relative;">
+                <div class="modal-con">
+                    <img src="images/img/close.png" alt="微信公众号" width="200" height="263" class="wechat-img">
+                </div>
                 <div class="display-flex">
-                    <div class="flex-con" style="height: 9rem;">
-                        <img src="images/img/sina.png" class="js-animate" data-animate="fadeInDown" data-time="0" alt="">  
-                        <div class="contact js-animate animated" data-animate="fadeInDown" data-time="300">
-                           <img src="images/img/wechat.png" alt="">  
+                    <div class="flex-con" style="height: 8.5rem;">
+                        <a href="https://weibo.com/moshtech?topnav=1&wvr=6&topsug=1"><img src="images/img/sina.png" class="js-animate" data-animate="fadeInDown" data-time="0" alt="" width="106" style="border: none"></a>
+                        <div class="contact js-animate animated" data-animate="fadeInDown" data-time="300" >
+                           <img src="images/img/wechat.png" alt="" width="106" id="wechat">
                         </div>
                         <p class="phone js-animate animated" data-animate="fadeInDown" data-time="600">4008-861-921</p>
                         <p class="word-times js-animate animated" data-animate="fadeInDown" data-time="900">工作日 早10:00-晚8:00</p>
@@ -114,6 +118,62 @@
                 }
             }
         });
+        // 二维码显示隐藏
+        $('#wechat').on('click',function(){
+            $('.modal-con').show();
+        })
+        $('.wechat-img').on('click',function(){
+            $('.modal-con').hide();
+        })
+
+        $(function () {
+            $.ajax({
+                url: "https://moshroom.cn/jwcms/index1.php?s=/Home/Index/wxsignatrue",
+                type: "POST",
+                dataType: 'json',
+                data: {
+                    'host': encodeURIComponent(document.URL.split('#')[0])
+                },
+                success: function (e) {
+                    if (e.code === 0) {
+                        wx.config({
+                            debug: false,
+                            url: e.data.url,
+                            appId: e.data.appId,
+                            timestamp: e.data.timestamp,
+                            nonceStr: e.data.nonceStr,
+                            signature: e.data.signature,
+                            jsApiList: [
+                                'onMenuShareTimeline',
+                                'onMenuShareAppMessage',
+                                'onMenuShareQQ',
+                                'onMenuShareWeibo',
+                                'onMenuShareQZone',
+                            ]
+                        });
+                        wx.ready(function () {
+                            let param = {
+                                title: '摩室科技 - 商务合作', // 分享标题
+                                desc: '摩室移动智能卫生间\n方便你我，智享生活。', // 分享描述
+                                link: document.URL, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                imgUrl: 'http://moshroom.cn/images/300.png', // 分享图标
+                                type: '', // 分享类型,music、video或link，不填默认为link
+                                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                                success: function () {}
+                            };
+                            wx.onMenuShareTimeline(param);
+                            wx.onMenuShareAppMessage(param);
+                            wx.onMenuShareQQ(param);
+                            wx.onMenuShareWeibo(param);
+                            wx.onMenuShareQZone(param);
+                        });
+                    } else {
+                        console.log(e.message);
+                    }
+                }
+            });
+        });
+
     </script>
 </body>
 </html>

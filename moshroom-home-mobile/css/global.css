@@ -182,7 +182,7 @@
     width:100%;
     height: 5.8rem;
     position:relative;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.22rem;
 }
 .second-img img{
     width:100%;
@@ -221,7 +221,7 @@
 .item .img-box{
     width:4.8rem;
     height: 6.6rem;
-    margin:0.3rem auto 0;
+    margin:0 auto 0;
 }
 .item .img-box img{
     display:inline-block;
@@ -256,7 +256,7 @@
 .pay-img{
     width:4rem;
     height: 5rem;
-    margin:0.3rem auto 0;
+    margin:0rem auto 0;
 }
 .pay-img img{
     width:100%;
@@ -301,6 +301,7 @@
     position:fixed;
     right:0px;
     top: 0px;
+    z-index: 111;
 }
 .navbar-toggle {
     position: relative;
@@ -355,10 +356,14 @@
 .closed-btn{
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 20px;
     color:#fff;
     font-size:40px;
     transition: All 0.4s ease-in-out;
+    width: 1rem;
+    height: 1rem;
+    background: url(../images/img/close_btn.png) no-repeat;
+    background-size: 100% 100%;
 }
 .closed-btn:hover{
     transform: rotateZ(360deg);
@@ -430,10 +435,6 @@
     justify-content:center;
     align-items:center;
 }
-.flex-con{
-    /*width:100%;
-    height: 100%;*/
-}
 .btn-bg{
     background:#000;
 }
@@ -443,6 +444,7 @@
 }
 .flex-con{
     height: 14rem;
+    width: 100%;
 }
 
 .about-us{
@@ -453,16 +455,26 @@
     width:100%;
     height: 4rem;
     border-radius: 8px;
+    margin-top: -2.2rem;
 }
-.about-us h2{
+h2.about-title-name{
     font-size:0.6rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    color: #fff;
+    text-align: center;
 }
-p{
+.us-header-con{
+    background-color: #116ad9;
+    height: 6rem;
+}
+.about-us p{
     text-indent: 2em;
     font-size: 0.45rem;
     line-height: 0.8rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.4rem;
+    color: #000;
 }
 .header-con{
     position: fixed;
@@ -472,6 +484,24 @@ p{
     width: 100%;
     background-color: #116ad9; 
 }
-
+.modal-con{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 11111;
+    display: none;
+}
+.footer-con img.wechat-img{
+    width: 200px;
+    height: 264px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -132px;
+}
 
 
